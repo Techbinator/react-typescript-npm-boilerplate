@@ -7,6 +7,7 @@
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
+    "deploy-example": "cd example && npm run deploy",
     "start": "concurrently --kill-others \"npm run build-watch\" \"npm run start-example\"",
     "start-example": "cd example && npm start",
     "test": "jest"
@@ -50,6 +51,5 @@
   "jsnext:main": "build/index.es.js",
   "files": [
     "build"
-  ],
-  "dependencies": {}
+  ]
 }
