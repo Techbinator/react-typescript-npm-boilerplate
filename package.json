@@ -1,13 +1,12 @@
 {
-  "name": "react-typescript-npm-bolierplate",
+  "name": "react-typescript-npm-boilerplate",
   "version": "1.0.0",
-  "description": "React typescript and jest powered bolerplate in order to easily create npm modules",
+  "description": "React typescript and jest powered boilerplate in order to easily create npm modules",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
-    "postinstall": "install-peers -f && cd example && npm i",
     "start": "concurrently --kill-others \"npm run build-watch\" \"npm run start-example\"",
     "start-example": "cd example && npm start",
     "test": "jest"
@@ -30,15 +29,11 @@
     "@types/react-dom": "^16.9.4",
     "@types/react-test-renderer": "^16.9.1",
     "concurrently": "^5.0.1",
-    "install-peers-cli": "^2.1.1",
     "jest": "^24.9.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-test-renderer": "^16.12.0",
     "rollup": "^1.27.8",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-typescript2": "^0.25.3",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.3"
