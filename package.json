@@ -8,8 +8,9 @@
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
     "deploy-example": "cd example && npm run deploy",
+    "postinstall": "cd example && npm i",
     "start": "concurrently --kill-others \"npm run build-watch\" \"npm run start-example\"",
-    "start-example": "cd example && npm start",
+    "start-example": "sleep 4 && cd example && npm start",
     "test": "jest"
   },
   "keywords": [
