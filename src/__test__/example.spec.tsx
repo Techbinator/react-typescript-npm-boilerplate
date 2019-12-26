@@ -8,8 +8,6 @@ describe('Component', () => {
     const testInstance = component.root;
 
     expect(testInstance.findByType(Hello).props.text).toBe('World');
-
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });
