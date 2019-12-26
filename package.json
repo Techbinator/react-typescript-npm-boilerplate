@@ -4,6 +4,14 @@
   "description": "React typescript and jest powered boilerplate in order to easily create npm modules",
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://techbinator.github.io/react-typescript-npm-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://techbinator.github.io/react-typescript-npm-boilerplate/issues"
+  },
+  "homepage": "https://techbinator.github.io/react-typescript-npm-boilerplate",
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",

@@ -19,7 +19,13 @@ To start developing, run `npm start`. It will build your library and run example
 
 - Remove the .git folder
   `rm -rf .git`
-- Modify the package.json fields: name, description, author,keywords, license(if needed).
+- Modify the package.json fields: name, description, author,keywords,repo, bugs, homepage, license(if needed).
 - Modify the README.md file in order to describe the library.
 - In the `./example/package.json` modify the homepage and dependencies part `react-typescript-npm-boilerplate` with the name of your library
 - Modify the imported library name in the `./example/src/App.tsx` from `react-typescript-npm-boilerplate` to your own libary name
+- Init git and add the remote origin path
+
+```
+git remote add origin https://github.com/Techbinator/skeleton-text.git
+git push -u origin master
+```
