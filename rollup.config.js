@@ -1,7 +1,9 @@
 import typescript from 'rollup-plugin-typescript2';
-import commonjs from 'rollup-plugin-commonjs';
-import external from 'rollup-plugin-peer-deps-external';
 import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+import postcss from 'rollup-plugin-postcss-modules';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import autoprefixer from 'autoprefixer';
 
 import pkg from './package.json';
 
@@ -22,6 +24,15 @@ export default {
     },
   ],
   plugins: [
+    postcss({
+      extract: false,
+      modules: true,
+      plugins: [autoprefixer()],
+      writeDefinitions: true,
+    }),
+    peerDepsExternal(),
+    resolve(),
+    commonjs(),
     typescript({
       rollupCommonJSResolveHack: true,
       exclude: '**/__tests__/**',
